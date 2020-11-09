@@ -1,4 +1,5 @@
-import './Contact.css'
+import './Contact.css';
+import React from 'react';
 
 const name = "Lusidave";
 const status = true;
