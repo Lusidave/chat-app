@@ -1,4 +1,5 @@
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
+import React from 'react';
 
 function App() {
   return (
