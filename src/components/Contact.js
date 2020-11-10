@@ -1,5 +1,6 @@
+import React from 'react';
 import './Contact.css';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 function Contact(props){
     return(
@@ -20,11 +21,11 @@ function Contact(props){
     )
 }
 
-// eslint-disable-next-line react/no-typos
-Contact.PropTypes = {
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    online: PropTypes.bool.isRequired
+
+Contact.propTypes = {
+    name: propTypes.string.isRequired,
+    avatar: propTypes.string.isRequired,
+    online: propTypes.bool.isRequired
 }
 
 
