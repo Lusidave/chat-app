@@ -1,5 +1,6 @@
 import './Contact.css';
 import PropTypes from 'prop-types';
+import React from "react";
 
 function Contact(props){
     return(
