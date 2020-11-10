@@ -1,18 +1,18 @@
-import './Contact.css'
+import './Contact.css';
+import PropTypes from 'prop-types';
 
-const name = "Lusidave";
-const status = true;
-
-function Contact(){
+function Contact(props){
     return(
         <div className='Contact'>
-            <img className="avatar" alt="" src='https://randomuser.me/api/portraits/men/50.jpg' />
+            <img className="avatar" 
+            alt={props.name} 
+            src={props.avatar} />
             <div>
-                <p>{name}</p>
+                <p>{props.name}</p>
                 <div className="status">
-                    <div className= {status ? "status-online" : "status-offline"} ></div>
+                    <div className= {props.online ? "status-online" : "status-offline"} ></div>
                     <div className="status-text">
-                    {status ? "online" : "offline"}
+                    {props.online ? "online" : "offline"}
                     </div>
                 </div>
             </div>
@@ -20,6 +20,12 @@ function Contact(){
     )
 }
 
+// eslint-disable-next-line react/no-typos
+Contact.PropTypes = {
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    online: PropTypes.bool.isRequired
+}
 
 
 export default Contact;
